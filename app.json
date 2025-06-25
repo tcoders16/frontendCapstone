@@ -1,38 +1,60 @@
 {
   "expo": {
+
     "name": "frontend",
     "slug": "frontend",
     "version": "1.0.0",
 
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
 
-    "experiments": {
-      "tsconfigPaths": true
-    },
-
-    "plugins": [],
-
-    "orientation": "portrait",
     "icon": "./assets/icon.png",
-
-    "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": ["**/*"],
-    "ios": {
-      "supportsTablet": true
+
+
+    "userInterfaceStyle": "light",
+    "orientation": "portrait",
+
+
+    "web": {
+      "favicon": "./assets/favicon.png"
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+
+
+    "experiments": {
+      "tsconfigPaths": true
+    },
+
+
+    "plugins": [
+      "expo-image-picker"        
+    ],
+
+
+
+    "ios": {
+      "bundleIdentifier": "com.anonymous.frontend",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription":
+          "We need access to your photo library so you can select an item picture.",
+        "NSCameraUsageDescription":
+          "We need access to your camera so you can take a picture of the item."
       }
-    }
+    },
+
+
+
+    "android": {
+      "package": "com.anonymous.frontend",
+      "permissions": ["READ_MEDIA_IMAGES"]
+    },
+    "infoPlist": {
+  "NSPhotoLibraryUsageDescription": "…",
+  "NSCameraUsageDescription": "We need access to your camera so you can snap a photo of the item."
+}
+    
   }
 }
