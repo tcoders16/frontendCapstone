@@ -28,9 +28,9 @@ const UploadImageScreen = () => {
       
       {/* 🍎 Header pinned at top like Apple */}
       <View style={styles.header}>
-        <PoppinsText weight="Bold" style={{ fontSize: 28 }}>
-          Upload Image
-        </PoppinsText>
+          <PoppinsText style={{ fontSize: 28, fontWeight: 'bold' }}>
+            Upload Image
+          </PoppinsText>
       </View>
 
       {/*  Centered Image Content */}
